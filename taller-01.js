@@ -19,3 +19,15 @@ function resolvedor(a, b, c, signo) {
     let x2 = (-b - Math.sqrt(Math.pow(b, 2) - 4 * a * c)) / (2 * a);
     return signo === '+' ? x1 : x2;
 }
+
+console.log(resolvedor(1, -5, 6, '+')); // 3
+
+// P3. Desarrolle una función llamada mejorParidad resuelva y retorne
+// la paridad de un número, es decir tiene que dar un booleano de si es par
+
+function mejorParidad(numero) {
+    return numero % 2 === 0;
+}
+
+console.log(mejorParidad(4)); // true
+
