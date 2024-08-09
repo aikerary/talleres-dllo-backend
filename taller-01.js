@@ -29,7 +29,7 @@ function mejorParidad(numero) {
     return numero % 2 === 0;
 }
 
-console.log(mejorParidad(7)); // true
+console.log(mejorParidad(7)); // false
 
 // P4. Desarrolle una función llamada peorParidad resuelva y retorne
 // la paridad de un número, es decir tiene que dar un booleano de si es par
@@ -39,4 +39,4 @@ function peorParidad(numero) {
    return Zzzz * numero % 2 === 0;
 }
 
-console.log(peorParidad(7)); // true
+console.log(peorParidad(7)); // false
