@@ -24,3 +24,13 @@ function includes(numbers, number) {
   });
   return result;
 }
+
+// Punto 3
+// Desarrolle una función llamada sum que reciba una lista de números
+// y devuelva la suma de todos los números de la lista.
+
+function sum(numbers) {
+  return numbers.reduce((acc, curr) => acc + curr);
+}
+
+console.log(sum([3, 17, -1, 4, -19])); // 4
