@@ -33,4 +33,19 @@ function sum(numbers) {
   return numbers.reduce((acc, curr) => acc + curr);
 }
 
-console.log(sum([3, 17, -1, 4, -19])); // 4
+// Punto 4
+// Desarrolle una función llamada missingNumbers que reciba una lista de números
+// y devuelva un array con los números faltantes entre el menor y mayor número de la lista.
+// No usar max ni min
+
+function missingNumbers(numbers) {
+  let min = numbers.reduce((acc, curr) => (acc < curr ? acc : curr));
+  let max = findMax(numbers);
+  let result = [];
+  for (let i = min; i < max; i++) {
+    if (!includes(numbers, i)) {
+      result.push(i);
+    }
+  }
+  return result;
+}
