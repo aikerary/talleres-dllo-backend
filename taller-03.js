@@ -11,6 +11,22 @@ function desglosarString(str, flag) {
   );
 }
 
+// Punto 2
+// Tecnicamente es una sola línea... 😅
+
+function twoSum(numbers, target) {
+  return numbers.reduce((acc, curr, i) => {
+    if (acc[0] === undefined) {
+      numbers.forEach((element, j) => {
+        if (i !== j && curr + element === target) {
+          acc = [i, j];
+        }
+      });
+    }
+    return acc;
+  }, []);
+}
+
 //Punto 3
 //Conversión romana a decimal
 // No fue la mejor idea usar un objeto tan largo
