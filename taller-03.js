@@ -10,3 +10,20 @@ function desglosarString(str, flag) {
     str.length * (flag === "consonante")
   );
 }
+
+//Punto 3
+//Conversión romana a decimal
+// No fue la mejor idea usar un objeto tan largo
+// Pero quería hacerlo en una linea 😅
+
+function conversionRomana(str) {
+  return [...str].reduce(
+    (r, c, i) =>
+      r +
+      ({ I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 }[str[i + 1]] >
+      { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 }[c]
+        ? -{ I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 }[c]
+        : { I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000 }[c]),
+    0,
+  );
+}
